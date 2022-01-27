@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <!-- Font Awesome -->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet">
+        <!-- Google Fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet">
+        <!-- MDB -->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.10.2/mdb.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="./css/styles.css">
+        <title>SignUp</title>
+    </head>
+    <body>
+        <div class="container">
+            <h1 class="fw-bold text-uppercase my-5 text-center">Sign Up</h1>
+            <div class="row mt-5">
+                <div class="col-lg-6 col-md-8 col-sm-10 col-12 mx-auto">
+                    <form id="form-submit">
+                        <div class="row mb-3">
+                            <div class="col-6">
+                                <div class="form-outline">
+                                    <input
+                                        type="text"
+                                        id="fname"
+                                        class="form-control form-control-lg"
+                                        oninput="checkFName()"
+                                    >
+                                    <label class="form-label" for="formControlLg">First Name</label>
+                                </div>
+                                <p class="small mb-0 text-danger" id="fname-error"></p>
+                            </div>
+                            <div class="col-6">
+                                <div class="form-outline">
+                                    <input
+                                        type="text"
+                                        id="lname"
+                                        class="form-control form-control-lg"
+                                        oninput="checkLName()"
+                                    >
+                                    <label class="form-label" for="formControlLg">Last Name</label>
+                                </div>
+                                <p class="small mb-0 text-danger" id="lname-error"></p>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <div class="form-outline">
+                                <input
+                                    type="text"
+                                    id="email"
+                                    class="form-control form-control-lg"
+                                    oninput="checkEmail()"
+                                >
+                                <label class="form-label" for="formControlLg">Email</label>
+                            </div>
+                            <p class="small mb-0 text-danger" id="email-error"></p>
+                        </div>
+                        <div class="mb-3">
+                            <div class="form-outline">
+                                <input
+                                    type="password"
+                                    id="password"
+                                    class="form-control form-control-lg"
+                                    oninput="checkPassword()"
+                                >
+                                <label class="form-label" for="formControlLg">Password</label>
+                            </div>
+                            <p class="small mb-0 text-danger" id="password-error"></p>
+                        </div>
+                        <div class="mb-3">
+                            <div class="form-outline">
+                                <input
+                                    type="password"
+                                    id="cpassword"
+                                    class="form-control form-control-lg"
+                                    oninput="checkCPassword()"
+                                >
+                                <label class="form-label" for="formControlLg">Confirm Password</label>
+                            </div>
+                            <p class="small mb-0 text-danger" id="cpassword-error"></p>
+                        </div>
+                        <div class="form-check mb-3">
+                            <input
+                                class="form-check-input"
+                                type="checkbox"
+                                value=""
+                                id="checkbox-pass"
+                                onchange="showPassword()"
+                            >
+                            <label class="form-check-label" for="flexCheckDefault">Show Password</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-lg w-100">Signup</button>
+                        <p class="mt-2 text-end">
+                            Already have an account?
+                            <a href="../Login/login.html">Login</a>
+                        </p>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!-- Sweet Alert Cdn -->
+        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+        <!-- MDB -->
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.10.2/mdb.min.js"></script>
+        <script src="./js/script.js"></script>
+    </body>
+</html>
